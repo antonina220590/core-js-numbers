@@ -428,7 +428,7 @@ function getNumberValue(number) {
  * '5'      => false
  */
 function isNumber(number) {
-  return Number.isFinite(number);
+  return Number.isFinite(number) && !Number.isNaN(number);
 }
 
 /**
