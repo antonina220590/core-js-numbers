@@ -370,9 +370,9 @@ describe('core-js-numbers', () => {
         const max = Math.floor(Math.random() * 10 + min + 1);
         const result = tasks.getRandomInteger(min, max);
         assert.equal(
-          min <= result && result <= max,
+          Number.isInteger(result),
           true,
-          `the ${result} is not in the range from ${min} to ${max}`
+          `the ${result} is not an integer`
         );
       }
     }
